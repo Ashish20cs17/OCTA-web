@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Balance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Trading Dashboard</h1>
+      <p>Your current balance: <span id="balance">₹10,000</span></p>
+    </header>
+    <div class="buttons">
+      <button id="withdrawBtn">Withdraw</button>
+      <button id="addFundBtn">Add Fund</button>
+    </div>
+    <div id="fundOptions" class="hidden">
+      <button id="upiBtn">UPI</button>
+      <button id="accountBtn">Account</button>
+      <button id="barcodeBtn">Barcode</button>
+    </div>
+    <section id="investment">
+      <h2>Invest in Stock</h2>
+      <form id="stockForm">
+        <input type="text" id="stockName" placeholder="Stock Name" required>
+        <input type="number" id="stockAmount" placeholder="Investment Amount" required>
+        <button type="submit">Invest</button>
+      </form>
+    </section>
+    <section id="orders">
+      <h2>Investment Orders</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Stock Name</th>
+            <th>Investment Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="ordersList">
+          <!-- Orders will be dynamically added here -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
